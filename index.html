@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Advanced Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>⚡ Unit Converter</h1>
+
+    <select id="category">
+        <option value="length">Length</option>
+        <option value="weight">Weight</option>
+        <option value="temperature">Temperature</option>
+        <option value="speed">Speed</option>
+        <option value="currency">Currency</option>
+    </select>
+
+    <div class="converter" id="converterSection">
+        <input type="number" id="inputValue" placeholder="Enter value">
+
+        <select id="fromUnit"></select>
+        <span>➡️</span>
+        <select id="toUnit"></select>
+    </div>
+
+    <div id="currencySection" style="display:none;">
+        <select id="fromCurrency">
+            <option value="USD">USD</option>
+            <option value="INR">INR</option>
+            <option value="EUR">EUR</option>
+        </select>
+
+        <select id="toCurrency">
+            <option value="INR">INR</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+        </select>
+    </div>
+
+    <button onclick="convert()">Convert</button>
+
+    <h2 id="result">Result: </h2>
+</div>
+<h3>History</h3>
+<ul id="history"></ul>
+<button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+<button onclick="startVoice()">🎤 Speak</button>
+
+<script src="script.js"></script>
+</body>
+</html>
